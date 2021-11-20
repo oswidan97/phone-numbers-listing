@@ -16,6 +16,9 @@ public class Customer {
   @Column
   private String phone;
 
+  @Column(name = "valid_phone")
+  private boolean validPhone;
+
   @OneToOne
   private Country country;
 
