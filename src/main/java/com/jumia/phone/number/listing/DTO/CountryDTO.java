@@ -7,6 +7,15 @@ public class CountryDTO {
 
   private String phoneNumberCode;
 
+  public CountryDTO() {
+  }
+
+  public CountryDTO(Integer id, String name, String phoneNumberCode) {
+    this.id = id;
+    this.name = name;
+    this.phoneNumberCode = phoneNumberCode;
+  }
+
   public Integer getId() {
     return id;
   }
@@ -29,5 +38,10 @@ public class CountryDTO {
 
   public void setPhoneNumberCode(String phoneNumberCode) {
     this.phoneNumberCode = phoneNumberCode;
+  }
+
+  @Override
+  public String toString() {
+    return "CountryDTO{" + "id=" + id + ", name='" + name + '\'' + ", phoneNumberCode='" + phoneNumberCode + '\'' + '}';
   }
 }

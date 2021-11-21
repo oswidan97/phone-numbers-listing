@@ -1,4 +1,6 @@
-package com.jumia.phone.number.listing.DTO;
+package com.jumia.phone.number.listing.DTO.customer;
+
+import com.jumia.phone.number.listing.DTO.CountryDTO;
 
 public class CustomerPhoneNumberDTO {
   private String phone;
@@ -6,6 +8,15 @@ public class CustomerPhoneNumberDTO {
   private boolean validPhone;
 
   private CountryDTO country;
+
+  public CustomerPhoneNumberDTO() {
+  }
+
+  public CustomerPhoneNumberDTO(String phone, boolean validPhone, CountryDTO country) {
+    this.phone = phone;
+    this.validPhone = validPhone;
+    this.country = country;
+  }
 
   public String getPhone() {
     return phone;
@@ -29,5 +40,10 @@ public class CustomerPhoneNumberDTO {
 
   public void setCountry(CountryDTO country) {
     this.country = country;
+  }
+
+  @Override
+  public String toString() {
+    return "CustomerPhoneNumberDTO{" + "phone='" + phone + '\'' + ", validPhone=" + validPhone + ", country=" + country + '}';
   }
 }
