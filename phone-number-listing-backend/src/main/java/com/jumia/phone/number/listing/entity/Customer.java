@@ -19,7 +19,7 @@ public class Customer {
   @Column(name = "valid_phone")
   private boolean validPhone;
 
-  @OneToOne
+  @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REFRESH})
   private Country country;
 
   public Customer() {
@@ -72,7 +72,11 @@ public class Customer {
   }
 
   public void validatePhoneNumber() {
-    validPhone = Pattern.matches(country.getRegex(), phone);
+    if (country != null && country.getRegex() != null) {
+      validPhone = Pattern.matches(country.getRegex(), phone);
+    } else {
+      throw new IllegalStateException();
+    }
   }
 
   @Override

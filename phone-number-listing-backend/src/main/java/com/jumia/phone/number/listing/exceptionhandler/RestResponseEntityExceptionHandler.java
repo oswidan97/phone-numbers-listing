@@ -10,8 +10,9 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 @ControllerAdvice
 public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
+
   @ExceptionHandler(value = {IllegalArgumentException.class, IllegalStateException.class})
-  protected ResponseEntity<Object> errorInRequestData(RuntimeException ex, WebRequest request) {
+  private ResponseEntity<Object> errorInRequestData(RuntimeException ex, WebRequest request) {
     String bodyOfResponse = "Error in the request data";
     return handleExceptionInternal(ex, bodyOfResponse, new HttpHeaders(), HttpStatus.BAD_REQUEST, request);
   }

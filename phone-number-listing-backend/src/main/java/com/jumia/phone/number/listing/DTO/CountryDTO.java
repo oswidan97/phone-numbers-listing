@@ -7,6 +7,8 @@ public class CountryDTO {
 
   private String phoneNumberCode;
 
+  private String regex;
+
   public CountryDTO() {
   }
 
@@ -38,6 +40,14 @@ public class CountryDTO {
 
   public void setPhoneNumberCode(String phoneNumberCode) {
     this.phoneNumberCode = phoneNumberCode;
+  }
+
+  public String getRegex() {
+    return regex;
+  }
+
+  public void setRegex(String regex) {
+    this.regex = regex;
   }
 
   @Override

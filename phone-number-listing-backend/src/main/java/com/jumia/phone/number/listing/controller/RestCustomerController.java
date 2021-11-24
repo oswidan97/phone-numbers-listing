@@ -25,7 +25,7 @@ public class RestCustomerController implements CustomerController<ResponseEntity
   }
 
   @Override
-  @PostMapping("/")
+  @PostMapping
   public ResponseEntity<?> addCustomer(@RequestBody CustomerDTO customerDTO) {
     customerService.addCustomer(customerDTO);
     return new ResponseEntity<>(HttpStatus.OK);
