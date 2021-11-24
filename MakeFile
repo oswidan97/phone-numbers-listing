@@ -1,0 +1,8 @@
+test: docker build -t backend -f BackEndDockerFile &&\
+ docker run -it --entrypoint ./phone-number-listing-backend/test-backend-entry-point.sh backend
+
+run: docker build -t backend -f ./phone-number-listing-backend/BackEndDockerFile &&\
+	docker build -t frontend  -f ./phone-number-listing-frontend/FrontEndDockerFile &&\
+	docker-compose up
+
+stop: docker-compose down 

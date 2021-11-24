@@ -1,0 +1,17 @@
+version: '3'
+services:
+  backend:
+    image: backend
+    volumes:
+      - ./phone-number-listing-backend/phone-numbers.db:/app/phone-numbers.db
+    expose:
+      - "8080"
+  frontend:
+    image: frontend
+    volumes: 
+      - ./phone-number-listing-frontend:/app
+    environment:
+      - BACKEND_PORT=8080
+      - BACKEND_DOMAIN_NAME=backend
+    depends_on:
+      - backend
