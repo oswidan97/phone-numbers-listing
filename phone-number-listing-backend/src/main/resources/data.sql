@@ -4,6 +4,17 @@ insert into customer (name, phone, valid_phone, country_id) values
  ('Omar', '+2372362323', '1', (select id from country where name = 'Cameron'));
 insert into customer (name, phone, valid_phone, country_id) values
  ('Amr', '+25123623234', '1', (select id from country where name = 'Ethiopia'));
-
+insert into customer (name, phone, valid_phone, country_id) values
+ ('Amr', '+25123623234', '1', (select id from country where name = 'Ethiopia'));
+insert into customer (name, phone, valid_phone, country_id) values
+ ('Amr', '+25123623234', '1', (select id from country where name = 'Ethiopia'));
+insert into customer (name, phone, valid_phone, country_id) values
+ ('Amr', '+25123623234', '1', (select id from country where name = 'Ethiopia'));
+insert into customer (name, phone, valid_phone, country_id) values
+ ('Amr', '+25123623234', '1', (select id from country where name = 'Ethiopia'));
+insert into customer (name, phone, valid_phone, country_id) values
+ ('Amr', '+25123623234', '1', (select id from country where name = 'Ethiopia'));
+insert into customer (name, phone, valid_phone, country_id) values
+ ('Amr', '+25123623234', '1', (select id from country where name = 'Ethiopia'));
 
 

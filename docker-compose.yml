@@ -4,14 +4,16 @@ services:
     image: backend
     volumes:
       - ./phone-number-listing-backend/phone-numbers.db:/app/phone-numbers.db
-    expose:
-      - "8080"
+    ports:
+      - "8080:8080"
   frontend:
     image: frontend
     volumes: 
       - ./phone-number-listing-frontend:/app
+    ports:
+      - "3000:3000"
     environment:
       - BACKEND_PORT=8080
-      - BACKEND_DOMAIN_NAME=backend
+      - BACKEND_DOMAIN_NAME=127.0.0.1
     depends_on:
       - backend

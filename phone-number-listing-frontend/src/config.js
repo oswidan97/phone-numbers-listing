@@ -1,6 +1,6 @@
 
 const configMap =  {
-    backend: `http://${process.env.BACKEND_DOMAIN_NAME}:${process.env.BACKEND_PORT}`
+    backend: `http://${process.env.REACT_APP_BACKEND_IP_ADDRESS}:${process.env.REACT_APP_BACKEND_PORT}`
 }
 
 export default configMap;

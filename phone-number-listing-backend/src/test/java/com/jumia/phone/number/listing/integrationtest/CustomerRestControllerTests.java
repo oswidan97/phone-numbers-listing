@@ -10,7 +10,7 @@ import com.jumia.phone.number.listing.entity.Customer;
 import com.jumia.phone.number.listing.repository.CountryRepository;
 import com.jumia.phone.number.listing.repository.CustomerRepository;
 import org.junit.After;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -36,7 +36,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
 @AutoConfigureMockMvc
 @TestPropertySource(locations = "classpath:application-integrationtest.properties")
-public class CustomerRestControllerTest {
+public class CustomerRestControllerTests {
 
   @Autowired
   private MockMvc mvc;

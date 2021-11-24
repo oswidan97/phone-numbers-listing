@@ -11,7 +11,7 @@ class PhoneListingTable extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      rowsPerPage: 2,
+      rowsPerPage: 4,
       data: [],
       totalPages: 1,
       countryName: "",
@@ -42,6 +42,8 @@ class PhoneListingTable extends React.Component {
         totalPages: response.data.totalPages,
         activePage: page,
       });
+    }).catch(error => {
+      console.log(error);
     });
   }
 
@@ -66,8 +68,6 @@ class PhoneListingTable extends React.Component {
   onPageChange(event, data) {
     window.scrollTo(0, 0);
     this.loadData(data.activePage);
-    console.log(data);
-    console.log(event);
   }
 
   render() {
